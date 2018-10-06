@@ -1,10 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace RegistroDetalle.Entidades
 {
-    internal class TelefonosDetalle
+    public class TelefonosDetalle
     {
-        [key]
+        [Key]
         public int Id { get; set; }
         public int PersonaId { get; set; }
         public string TipoTelefono { get; set; }

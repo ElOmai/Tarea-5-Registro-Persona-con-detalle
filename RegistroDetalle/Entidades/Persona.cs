@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RegistroDetalle.Entidades
 {
-    class Persona
+    public class Persona
     {
-        [key]
+        [Key]
         public int PersonaId { get; set; }
         public string Nombre { get; set; }
         public string Cedula { get; set; }
