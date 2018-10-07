@@ -16,5 +16,7 @@ namespace RegistroDetalle.UI.Registros
         {
             InitializeComponent();
         }
+
+        
     }
 }
