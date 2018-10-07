@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroDetalle.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace RegistroDetalle
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void registroDePersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RPersonas rp = new RPersonas();
+            rp.Show();
         }
     }
 }

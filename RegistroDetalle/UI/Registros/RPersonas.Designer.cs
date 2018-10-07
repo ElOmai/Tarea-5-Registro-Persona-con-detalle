@@ -1,4 +1,4 @@
-﻿namespace RegistroDetalle.UI.Registros
+﻿namespace RegistroDetalle.UI
 {
     partial class RPersonas
     {
@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.PersonaIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TelefonosdataGridView = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.FechaNacimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TipocomboBox = new System.Windows.Forms.ComboBox();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Removerbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PersonaIdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonosdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,12 +65,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // PersonaIdnumericUpDown
+            // IDnumericUpDown
             // 
-            this.PersonaIdnumericUpDown.Location = new System.Drawing.Point(73, 13);
-            this.PersonaIdnumericUpDown.Name = "PersonaIdnumericUpDown";
-            this.PersonaIdnumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.PersonaIdnumericUpDown.TabIndex = 1;
+            this.IDnumericUpDown.Location = new System.Drawing.Point(73, 13);
+            this.IDnumericUpDown.Name = "IDnumericUpDown";
+            this.IDnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.IDnumericUpDown.TabIndex = 1;
             // 
             // label2
             // 
@@ -96,13 +99,13 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "F.Nacimiento";
             // 
-            // dataGridView1
+            // TelefonosdataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 222);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(361, 150);
-            this.dataGridView1.TabIndex = 5;
+            this.TelefonosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TelefonosdataGridView.Location = new System.Drawing.Point(12, 222);
+            this.TelefonosdataGridView.Name = "TelefonosdataGridView";
+            this.TelefonosdataGridView.Size = new System.Drawing.Size(361, 150);
+            this.TelefonosdataGridView.TabIndex = 5;
             // 
             // label5
             // 
@@ -145,36 +148,36 @@
             this.DirecciontextBox.Size = new System.Drawing.Size(120, 20);
             this.DirecciontextBox.TabIndex = 10;
             // 
-            // maskedTextBox1
+            // CedulamaskedTextBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(73, 137);
-            this.maskedTextBox1.Mask = "000-0000000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(83, 20);
-            this.maskedTextBox1.TabIndex = 11;
+            this.CedulamaskedTextBox.Location = new System.Drawing.Point(73, 137);
+            this.CedulamaskedTextBox.Mask = "000-0000000-0";
+            this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
+            this.CedulamaskedTextBox.Size = new System.Drawing.Size(83, 20);
+            this.CedulamaskedTextBox.TabIndex = 11;
             // 
-            // maskedTextBox2
+            // TelefonomaskedTextBox
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(76, 196);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 12;
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(76, 196);
+            this.TelefonomaskedTextBox.Mask = "(999) 000-0000";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TelefonomaskedTextBox.TabIndex = 12;
             // 
-            // dateTimePicker1
+            // FechaNacimientodateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(87, 170);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.FechaNacimientodateTimePicker.Location = new System.Drawing.Point(87, 170);
+            this.FechaNacimientodateTimePicker.Name = "FechaNacimientodateTimePicker";
+            this.FechaNacimientodateTimePicker.Size = new System.Drawing.Size(180, 20);
+            this.FechaNacimientodateTimePicker.TabIndex = 13;
             // 
-            // comboBox1
+            // TipocomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(217, 196);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
+            this.TipocomboBox.FormattingEnabled = true;
+            this.TipocomboBox.Location = new System.Drawing.Point(217, 196);
+            this.TipocomboBox.Name = "TipocomboBox";
+            this.TipocomboBox.Size = new System.Drawing.Size(121, 21);
+            this.TipocomboBox.TabIndex = 14;
             // 
             // Agregarbutton
             // 
@@ -193,6 +196,7 @@
             this.Buscarbutton.TabIndex = 16;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Removerbutton
             // 
@@ -230,6 +234,10 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // RPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,25 +249,26 @@
             this.Controls.Add(this.Removerbutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Agregarbutton);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.TipocomboBox);
+            this.Controls.Add(this.FechaNacimientodateTimePicker);
+            this.Controls.Add(this.TelefonomaskedTextBox);
+            this.Controls.Add(this.CedulamaskedTextBox);
             this.Controls.Add(this.DirecciontextBox);
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TelefonosdataGridView);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.PersonaIdnumericUpDown);
+            this.Controls.Add(this.IDnumericUpDown);
             this.Controls.Add(this.label1);
             this.Name = "RPersonas";
             this.Text = "RPersonas";
-            ((System.ComponentModel.ISupportInitialize)(this.PersonaIdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonosdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,25 +277,26 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown PersonaIdnumericUpDown;
+        private System.Windows.Forms.NumericUpDown IDnumericUpDown;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TelefonosdataGridView;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.TextBox DirecciontextBox;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
+        private System.Windows.Forms.DateTimePicker FechaNacimientodateTimePicker;
+        private System.Windows.Forms.ComboBox TipocomboBox;
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
