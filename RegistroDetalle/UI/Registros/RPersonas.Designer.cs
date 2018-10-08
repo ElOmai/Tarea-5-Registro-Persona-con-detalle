@@ -51,13 +51,13 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.registroDetalleDBDataSet = new RegistroDetalle.RegistroDetalleDBDataSet();
+            this.registroDetalleDBDataSet1 = new RegistroDetalle.RegistroDetalleDBDataSet1();
             this.tiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposTableAdapter = new RegistroDetalle.RegistroDetalleDBDataSetTableAdapters.TiposTableAdapter();
+            this.tiposTableAdapter = new RegistroDetalle.RegistroDetalleDBDataSet1TableAdapters.TiposTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TelefonosdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,15 +178,11 @@
             // 
             // TipocomboBox
             // 
-            this.TipocomboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tiposBindingSource, "Tipo", true));
-            this.TipocomboBox.DataSource = this.tiposBindingSource;
-            this.TipocomboBox.DisplayMember = "Tipo";
             this.TipocomboBox.FormattingEnabled = true;
             this.TipocomboBox.Location = new System.Drawing.Point(217, 196);
             this.TipocomboBox.Name = "TipocomboBox";
             this.TipocomboBox.Size = new System.Drawing.Size(121, 21);
             this.TipocomboBox.TabIndex = 14;
-            this.TipocomboBox.ValueMember = "Id";
             // 
             // Agregarbutton
             // 
@@ -252,15 +248,15 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // registroDetalleDBDataSet
+            // registroDetalleDBDataSet1
             // 
-            this.registroDetalleDBDataSet.DataSetName = "RegistroDetalleDBDataSet";
-            this.registroDetalleDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.registroDetalleDBDataSet1.DataSetName = "RegistroDetalleDBDataSet1";
+            this.registroDetalleDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tiposBindingSource
             // 
             this.tiposBindingSource.DataMember = "Tipos";
-            this.tiposBindingSource.DataSource = this.registroDetalleDBDataSet;
+            this.tiposBindingSource.DataSource = this.registroDetalleDBDataSet1;
             // 
             // tiposTableAdapter
             // 
@@ -298,7 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TelefonosdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,8 +325,8 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private RegistroDetalleDBDataSet registroDetalleDBDataSet;
+        private RegistroDetalleDBDataSet1 registroDetalleDBDataSet1;
         private System.Windows.Forms.BindingSource tiposBindingSource;
-        private RegistroDetalleDBDataSetTableAdapters.TiposTableAdapter tiposTableAdapter;
+        private RegistroDetalleDBDataSet1TableAdapters.TiposTableAdapter tiposTableAdapter;
     }
 }

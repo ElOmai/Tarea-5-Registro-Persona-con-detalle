@@ -8,13 +8,13 @@ namespace RegistroDetalle.BLL
 {
     class TiposBLL
     {
-        public static bool Guardar(TelefonosDetalle Telefonos)
+        public static bool Guardar(Tipos Tipos)
         {
             bool paso = false;
             Contexto db = new Contexto();
             try
             {
-                if (db.Telefonos.Add(Telefonos) != null)
+                if (db.Tipos.Add(Tipos) != null)
                 {
                     paso = db.SaveChanges() > 0;
                 }
@@ -31,7 +31,7 @@ namespace RegistroDetalle.BLL
 
             return paso;
         }
-        public static bool Modificar(TelefonosDetalle telefono)
+        public static bool Modificar(Tipos telefono)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -56,7 +56,7 @@ namespace RegistroDetalle.BLL
             Contexto db = new Contexto();
             try
             {
-                var eliminar = db.Telefonos.Find(id);
+                var eliminar = db.Tipos.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
 
                 paso = (db.SaveChanges() > 0);
@@ -69,13 +69,13 @@ namespace RegistroDetalle.BLL
             }
             return paso;
         }
-        public static TelefonosDetalle Buscar(int id)
+        public static Tipos Buscar(int id)
         {
             Contexto db = new Contexto();
-            TelefonosDetalle telefono = new TelefonosDetalle();
+            Tipos telefono = new Tipos();
             try
             {
-                telefono = db.Telefonos.Find(id);
+                telefono = db.Tipos.Find(id);
                 db.Dispose();
             }
             catch (Exception)

@@ -12,18 +12,18 @@ namespace RegistroDetalle.UI.Registros
             InitializeComponent();
         }
 
-        private TelefonosDetalle LlenaClase()
+        private Tipos LlenaClase()
         {
-            TelefonosDetalle Tipo = new TelefonosDetalle();
+            Tipos Tipo = new Tipos();
             Tipo.Id = Convert.ToInt32(IDnumericUpDown.Value);
-            Tipo.TipoTelefono = TipotextBox.Text;
+            Tipo.Tipo = TipotextBox.Text;
             return Tipo;
         }
 
-        private void LlenaCampo(TelefonosDetalle Tipo)
+        private void LlenaCampo(Tipos Tipo)
         {
             IDnumericUpDown.Value = Tipo.Id;
-            TipotextBox.Text = Tipo.TipoTelefono;
+            TipotextBox.Text = Tipo.Tipo;
         }
 
         private void Limpiar()
@@ -48,7 +48,7 @@ namespace RegistroDetalle.UI.Registros
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             bool paso = false;
-            TelefonosDetalle Tipo;
+            Tipos Tipo;
             if (!Validar())
                 return;
             Tipo = LlenaClase();
@@ -71,7 +71,7 @@ namespace RegistroDetalle.UI.Registros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            TelefonosDetalle telefono = new TelefonosDetalle();
+            Tipos telefono = new Tipos();
             int.TryParse(IDnumericUpDown.Text, out int id);
 
             if (TiposBLL.Eliminar(id))
@@ -83,7 +83,7 @@ namespace RegistroDetalle.UI.Registros
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            TelefonosDetalle Telefono = new TelefonosDetalle();
+            Tipos Telefono = new Tipos();
             int.TryParse(IDnumericUpDown.Text, out int id);
 
             Telefono = TiposBLL.Buscar(id);

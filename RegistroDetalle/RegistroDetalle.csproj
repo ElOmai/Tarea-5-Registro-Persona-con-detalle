@@ -58,6 +58,7 @@
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\TelefonosDetalle.cs" />
+    <Compile Include="Entidades\Tipos.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RegistroDetalleDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDetalleDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroDetalleDBDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RPersonas.cs">
       <SubType>Form</SubType>
@@ -121,6 +127,17 @@
     </None>
     <None Include="RegistroDetalleDBDataSet.xss">
       <DependentUpon>RegistroDetalleDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegistroDetalleDBDataSet1.xsc">
+      <DependentUpon>RegistroDetalleDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RegistroDetalleDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistroDetalleDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegistroDetalleDBDataSet1.xss">
+      <DependentUpon>RegistroDetalleDBDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
