@@ -85,11 +85,6 @@ namespace RegistroDetalle.UI
             }
             return paso;
         }
-
-        private void Nuevobutton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
         private bool ExiteEnLaBaseDeDatos()
         {
             Persona persona = PersonasBLL.Buscar((int)IDnumericUpDown.Value);
@@ -187,6 +182,13 @@ namespace RegistroDetalle.UI
                         )
                         );
             }
+        }
+
+        private void RPersonas_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'registroDetalleDBDataSet.Tipos' table. You can move, or remove it, as needed.
+            this.tiposTableAdapter.Fill(this.registroDetalleDBDataSet.Tipos);
+
         }
     }
 }

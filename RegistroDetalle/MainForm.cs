@@ -1,4 +1,6 @@
-﻿using RegistroDetalle.UI;
+﻿
+using RegistroDetalle.UI;
+using RegistroDetalle.UI.Registros;
 using System;
 using System.Windows.Forms;
 
@@ -15,6 +17,12 @@ namespace RegistroDetalle
         {
             RPersonas rp = new RPersonas();
             rp.Show();
+        }
+
+        private void registroDeTiposDeTelefonoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RTipos rt = new RTipos();
+            rt.Show();
         }
     }
 }
