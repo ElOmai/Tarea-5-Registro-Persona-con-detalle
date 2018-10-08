@@ -90,25 +90,32 @@ namespace RegistroDetalle.UI
         {
             Limpiar();
         }
-
-        private void Agregarbutton_Click(object sender, EventArgs e)
+        private bool ExiteEnLaBaseDeDatos()
         {
-            if (TelefonosdataGridView.DataSource != null)
-            {
-                this.Detalle = (List<TelefonosDetalle>)TelefonosdataGridView.DataSource;
+            Persona persona = PersonasBLL.Buscar((int)IDnumericUpDown.Value);
+            return (persona != null);
+        }
 
-                this.Detalle.Add(
-                    new TelefonosDetalle(
-                         id: (int)IDnumericUpDown.Value,
-                         personaId: (int)IDnumericUpDown.Value,
-                        tipoTelefono: TipocomboBox.Text,
-                        telefono: TelefonomaskedTextBox.Text
-                        )
-                        );
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            errorProvider.Clear();
+            Persona persona = new Persona();
+            int.TryParse(IDnumericUpDown.Text, out int id);
+
+            persona = PersonasBLL.Buscar(id);
+
+            if (persona != null)
+            {
+                MessageBox.Show("Persona Encotrada");
+                LlenaCampo(persona);
+            }
+            else
+            {
+                MessageBox.Show("Persona no Encotrada");
             }
         }
 
-        private void Removebutton_Click(object sender, EventArgs e)
+        private void Removerbutton_Click(object sender, EventArgs e)
         {
             if (TelefonosdataGridView.Rows.Count > 0 && TelefonosdataGridView.CurrentRow != null)
             {
@@ -118,13 +125,13 @@ namespace RegistroDetalle.UI
 
             }
         }
-        private bool ExiteEnLaBaseDeDatos()
+
+        private void Nuevobutton_Click_1(object sender, EventArgs e)
         {
-            Persona persona = PersonasBLL.Buscar((int)IDnumericUpDown.Value);
-            return (persona != null);
+            Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
             bool paso = false;
             Persona persona;
@@ -151,10 +158,9 @@ namespace RegistroDetalle.UI
                 MessageBox.Show("No se pudo guardar!!", "fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
-
         }
 
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             errorProvider.Clear();
             Persona persona = new Persona();
@@ -166,22 +172,20 @@ namespace RegistroDetalle.UI
                 errorProvider.SetError(IDnumericUpDown, "Persona no Exite");
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
+        private void Agregarbutton_Click_1(object sender, EventArgs e)
         {
-            errorProvider.Clear();
-            Persona persona = new Persona();
-            int.TryParse(IDnumericUpDown.Text, out int id);
-
-            persona = PersonasBLL.Buscar(id);
-
-            if (persona != null)
+            if (TelefonosdataGridView.DataSource != null)
             {
-                MessageBox.Show("Persona Encotrada");
-                LlenaCampo(persona);
-            }
-            else
-            {
-                MessageBox.Show("Persona no Encotrada");
+                this.Detalle = (List<TelefonosDetalle>)TelefonosdataGridView.DataSource;
+
+                this.Detalle.Add(
+                    new TelefonosDetalle(
+                         id: (int)IDnumericUpDown.Value,
+                         personaId: (int)IDnumericUpDown.Value,
+                        tipoTelefono: TipocomboBox.Text,
+                        telefono: TelefonomaskedTextBox.Text
+                        )
+                        );
             }
         }
     }

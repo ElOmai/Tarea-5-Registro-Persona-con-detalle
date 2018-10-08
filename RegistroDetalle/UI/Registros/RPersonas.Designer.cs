@@ -106,6 +106,7 @@
             this.TelefonosdataGridView.Name = "TelefonosdataGridView";
             this.TelefonosdataGridView.Size = new System.Drawing.Size(361, 150);
             this.TelefonosdataGridView.TabIndex = 5;
+            
             // 
             // label5
             // 
@@ -161,8 +162,9 @@
             this.TelefonomaskedTextBox.Location = new System.Drawing.Point(76, 196);
             this.TelefonomaskedTextBox.Mask = "(999) 000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
-            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(80, 20);
             this.TelefonomaskedTextBox.TabIndex = 12;
+            
             // 
             // FechaNacimientodateTimePicker
             // 
@@ -187,10 +189,11 @@
             this.Agregarbutton.TabIndex = 15;
             this.Agregarbutton.Text = "+";
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click_1);
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(217, 13);
+            this.Buscarbutton.Location = new System.Drawing.Point(217, 16);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
             this.Buscarbutton.TabIndex = 16;
@@ -206,6 +209,7 @@
             this.Removerbutton.TabIndex = 17;
             this.Removerbutton.Text = "Remover Fila";
             this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -215,6 +219,7 @@
             this.Nuevobutton.TabIndex = 18;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click_1);
             // 
             // Guardarbutton
             // 
@@ -224,6 +229,7 @@
             this.Guardarbutton.TabIndex = 19;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click_1);
             // 
             // Eliminarbutton
             // 
@@ -233,6 +239,7 @@
             this.Eliminarbutton.TabIndex = 20;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click_1);
             // 
             // errorProvider
             // 
