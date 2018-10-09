@@ -186,8 +186,8 @@ namespace RegistroDetalle.UI
 
         private void RPersonas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'registroDetalleDBDataSet1.Tipos' table. You can move, or remove it, as needed.
-            this.tiposTableAdapter.Fill(this.registroDetalleDBDataSet1.Tipos);
+            // TODO: This line of code loads data into the 'registroDetalleDBDataSet.Tipos' table. You can move, or remove it, as needed.
+            this.tiposTableAdapter.Fill(this.registroDetalleDBDataSet.Tipos);
 
         }
     }

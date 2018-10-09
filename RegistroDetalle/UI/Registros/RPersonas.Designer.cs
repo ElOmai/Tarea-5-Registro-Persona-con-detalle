@@ -51,13 +51,13 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.registroDetalleDBDataSet1 = new RegistroDetalle.RegistroDetalleDBDataSet1();
+            this.registroDetalleDBDataSet = new RegistroDetalle.RegistroDetalleDBDataSet();
             this.tiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposTableAdapter = new RegistroDetalle.RegistroDetalleDBDataSet1TableAdapters.TiposTableAdapter();
+            this.tiposTableAdapter = new RegistroDetalle.RegistroDetalleDBDataSetTableAdapters.TiposTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TelefonosdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +133,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(182, 199);
+            this.label7.Location = new System.Drawing.Point(214, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 8;
@@ -178,15 +178,19 @@
             // 
             // TipocomboBox
             // 
+            this.TipocomboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tiposBindingSource, "Tipo", true));
+            this.TipocomboBox.DataSource = this.registroDetalleDBDataSet;
+            this.TipocomboBox.DisplayMember = "Tipos.Tipo";
             this.TipocomboBox.FormattingEnabled = true;
-            this.TipocomboBox.Location = new System.Drawing.Point(217, 196);
+            this.TipocomboBox.Location = new System.Drawing.Point(252, 195);
             this.TipocomboBox.Name = "TipocomboBox";
             this.TipocomboBox.Size = new System.Drawing.Size(121, 21);
             this.TipocomboBox.TabIndex = 14;
+            this.TipocomboBox.ValueMember = "Id";
             // 
             // Agregarbutton
             // 
-            this.Agregarbutton.Location = new System.Drawing.Point(345, 193);
+            this.Agregarbutton.Location = new System.Drawing.Point(162, 196);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(28, 23);
             this.Agregarbutton.TabIndex = 15;
@@ -248,15 +252,15 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // registroDetalleDBDataSet1
+            // registroDetalleDBDataSet
             // 
-            this.registroDetalleDBDataSet1.DataSetName = "RegistroDetalleDBDataSet1";
-            this.registroDetalleDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.registroDetalleDBDataSet.DataSetName = "RegistroDetalleDBDataSet";
+            this.registroDetalleDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tiposBindingSource
             // 
             this.tiposBindingSource.DataMember = "Tipos";
-            this.tiposBindingSource.DataSource = this.registroDetalleDBDataSet1;
+            this.tiposBindingSource.DataSource = this.registroDetalleDBDataSet;
             // 
             // tiposTableAdapter
             // 
@@ -266,7 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 488);
+            this.ClientSize = new System.Drawing.Size(388, 465);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -294,7 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TelefonosdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroDetalleDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,8 +329,8 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private RegistroDetalleDBDataSet1 registroDetalleDBDataSet1;
+        private RegistroDetalleDBDataSet registroDetalleDBDataSet;
         private System.Windows.Forms.BindingSource tiposBindingSource;
-        private RegistroDetalleDBDataSet1TableAdapters.TiposTableAdapter tiposTableAdapter;
+        private RegistroDetalleDBDataSetTableAdapters.TiposTableAdapter tiposTableAdapter;
     }
 }

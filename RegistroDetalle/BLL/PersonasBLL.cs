@@ -42,6 +42,8 @@ namespace RegistroDetalle.BLL
                 {
                     if (!persona.Telefonos.Exists(d => d.Id == item.Id))
                         db.Entry(item).State = EntityState.Deleted;
+                    else
+                        db.Entry(item).State = EntityState.Modified;
                 }
                 db.Entry(persona).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);

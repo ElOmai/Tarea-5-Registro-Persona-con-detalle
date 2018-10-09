@@ -1,8 +1,10 @@
 ﻿using RegistroDetalle.DAL;
 using RegistroDetalle.Entidades;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace RegistroDetalle.BLL
 {
@@ -31,14 +33,14 @@ namespace RegistroDetalle.BLL
 
             return paso;
         }
-        public static bool Modificar(Tipos telefono)
+        public static bool Modificar(Tipos Tipo)
         {
             bool paso = false;
             Contexto db = new Contexto();
 
             try
             {
-                db.Entry(telefono).State = EntityState.Modified;
+                db.Entry(Tipo).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
                 db.Dispose();
             }
@@ -72,16 +74,36 @@ namespace RegistroDetalle.BLL
         public static Tipos Buscar(int id)
         {
             Contexto db = new Contexto();
-            Tipos telefono = new Tipos();
+            Tipos Tipo = new Tipos();
             try
             {
-                telefono = db.Tipos.Find(id);
+                Tipo = db.Tipos.Find(id);
                 db.Dispose();
             }
             catch (Exception)
             { throw; }
 
-            return telefono;
+            return Tipo;
+        }
+        public static List<Tipos> GetList(Expression<Func<Tipos, bool>> expression)
+        {
+            List<Tipos> tipos = new List<Tipos>();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                tipos = contexto.Tipos.Where(expression).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return tipos;
         }
     }
 }
+    

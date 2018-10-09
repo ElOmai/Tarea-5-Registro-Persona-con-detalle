@@ -77,7 +77,7 @@ namespace RegistroDetalle.UI.Registros
             if (TiposBLL.Eliminar(id))
                 MessageBox.Show("Eliminado");
             else
-                errorProvider.SetError(IDnumericUpDown, "Persona no Exite");
+                errorProvider.SetError(IDnumericUpDown, "Tipo no Exite");
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -90,12 +90,12 @@ namespace RegistroDetalle.UI.Registros
 
             if (Telefono != null)
             {
-                MessageBox.Show("Persona Encotrada");
+                MessageBox.Show("Tipo no Encotrado");
                 LlenaCampo(Telefono);
             }
             else
             {
-                MessageBox.Show("Persona no Encotrada");
+                MessageBox.Show("Tipo no Encotrado");
             }
         }
     }
